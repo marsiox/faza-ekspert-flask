@@ -36,6 +36,10 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="{% block canonical %}{{ request.url }}{% endblock %}">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
     <!-- Hreflang for Polish -->
     <link rel="alternate" href="{{ request.url }}" hreflang="pl">
     <link rel="alternate" href="{{ request.url }}" hreflang="x-default">

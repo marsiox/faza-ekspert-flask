@@ -1,0 +1,378 @@
+{% extends "base.html" %}
+
+{% block title %}Pomiary Elektryczne Gdańsk - Okresowe i Odbiorcze | Od 200zł | Faza-Ekspert{% endblock %}
+
+{% block description %}⚡ Pomiary elektryczne Gdańsk ⚡ Pomiary okresowe i odbiorcze ⚡ Certyfikowani elektrycy ⚡ Protokoły pomiarowe ⚡ Od 200zł ⚡ Rezystancja izolacji, impedancja pętli ⚡ Trójmiasto{% endblock %}
+
+{% block keywords %}pomiary elektryczne Gdańsk, pomiary okresowe, pomiary odbiorcze, protokół pomiarowy, rezystancja izolacji, impedancja pętli zwarciowej, pomiary instalacji elektrycznych, elektryk pomiary Gdańsk, cena pomiarów elektrycznych{% endblock %}
+
+{% block structured_data %}
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Pomiary elektryczne",
+    "name": "Pomiary elektryczne Gdańsk",
+    "description": "Profesjonalne pomiary elektryczne - okresowe i odbiorcze. Certyfikowani elektrycy z uprawnieniami SEP.",
+    "provider": {
+        "@type": "LocalBusiness",
+        "name": "Faza-Ekspert sp. z o.o.",
+        "telephone": "+48664883028",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Racławicka 9/5",
+            "addressLocality": "Gdańsk",
+            "postalCode": "80-280",
+            "addressCountry": "PL"
+        }
+    },
+    "areaServed": ["Gdańsk", "Gdynia", "Sopot"],
+    "offers": [
+        {
+            "@type": "Offer",
+            "name": "Pomiary mieszkanie do 50m²",
+            "price": "200",
+            "priceCurrency": "PLN",
+            "description": "Kompleksowe pomiary elektryczne mieszkania"
+        },
+        {
+            "@type": "Offer",
+            "name": "Pomiary dom jednorodzinny",
+            "price": "350",
+            "priceCurrency": "PLN",
+            "description": "Pomiary instalacji elektrycznej domu"
+        }
+    ],
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Rodzaje pomiarów",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Pomiary okresowe",
+                    "description": "Obowiązkowe pomiary zgodnie z rozporządzeniem"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Pomiary odbiorcze",
+                    "description": "Pomiary nowych instalacji przed oddaniem do użytku"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Pomiary rezystancji izolacji",
+                    "description": "Sprawdzenie stanu izolacji przewodów"
+                }
+            }
+        ]
+    }
+}
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-primary to-blue-600 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">POMIARY ELEKTRYCZNE</h1>
+        <p class="text-xl opacity-90">Precyzyjne i profesjonalne pomiary instalacji elektrycznych na terenie Trójmiasta i okolic</p>
+    </div>
+</section>
+
+<!-- Types of Measurements -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Rodzaje pomiarów elektrycznych</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Periodic Measurements -->
+            <div class="bg-blue-50 p-8 rounded-lg border-l-4 border-primary">
+                <h3 class="text-2xl font-bold text-primary mb-4 flex items-center">
+                    <i class="fas fa-calendar-alt mr-3"></i>
+                    Pomiary okresowe
+                </h3>
+                <p class="text-gray-700 mb-4">
+                    Obowiązkowe pomiary wykonywane zgodnie z rozporządzeniem Ministra Gospodarki w określonych odstępach czasu.
+                </p>
+                <ul class="space-y-2 text-gray-600">
+                    <li>• Lokale mieszkalne i użytkowe co 5 lat</li>
+                    <li>• Zakłady pracy - co rok</li>
+                    <li>• Miejsca szczególnie niebezpieczne - co pół roku</li>
+                </ul>
+            </div>
+
+            <!-- Acceptance Measurements -->
+            <div class="bg-green-50 p-8 rounded-lg border-l-4 border-green-500">
+                <h3 class="text-2xl font-bold text-green-700 mb-4 flex items-center">
+                    <i class="fas fa-check-circle mr-3"></i>
+                    Pomiary odbiorcze
+                </h3>
+                <p class="text-gray-700 mb-4">
+                    Pomiary wykonywane przed oddaniem instalacji do użytku oraz po każdej modernizacji.
+                </p>
+                <ul class="space-y-2 text-gray-600">
+                    <li>• Nowe instalacje elektryczne</li>
+                    <li>• Po rozbudowie instalacji</li>
+                    <li>• Po modernizacji lub naprawie</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What We Measure -->
+<section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Co mierzymy?</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Measurement 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-primary rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                    <i class="fas fa-bolt text-white"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-3">Rezystancja izolacji</h3>
+                <p class="text-gray-600 text-sm">
+                    Sprawdzenie stanu izolacji przewodów i urządzeń elektrycznych
+                </p>
+            </div>
+
+            <!-- Measurement 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-secondary rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                    <i class="fas fa-plug text-white"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-3">Impedancja pętli zwarciowej</h3>
+                <p class="text-gray-600 text-sm">
+                    Weryfikacja skuteczności działania zabezpieczeń przeciążeniowych
+                </p>
+            </div>
+
+            <!-- Measurement 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-green-500 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                    <i class="fas fa-shield-alt text-white"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-3">Rezystancja uziemienia</h3>
+                <p class="text-gray-600 text-sm">
+                    Pomiar skuteczności układu uziemiającego instalacji
+                </p>
+            </div>
+
+            <!-- Measurement 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-purple-500 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                    <i class="fas fa-eye text-white"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-3">Oględziny instalacji</h3>
+                <p class="text-gray-600 text-sm">
+                    Wizualna ocena stanu technicznego instalacji i osprzętu
+                </p>
+            </div>
+
+            <!-- Measurement 5 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-red-500 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                    <i class="fas fa-fire text-white"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-3">Instalacje odgromowe</h3>
+                <p class="text-gray-600 text-sm">
+                    Sprawdzenie stanu i skuteczności instalacji odgromowej
+                </p>
+            </div>
+
+            <!-- Measurement 6 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-yellow-500 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                    <i class="fas fa-lightbulb text-white"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-3">Oświetlenie awaryjne</h3>
+                <p class="text-gray-600 text-sm">
+                    Kontrola funkcjonowania systemów oświetlenia awaryjnego
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Jak przebiega pomiar?</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <div class="bg-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <span class="text-white text-2xl font-bold">1</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Umówienie terminu</h3>
+                <p class="text-gray-600 text-sm">Kontakt telefoniczny i ustalenie dogodnego terminu wizyty</p>
+            </div>
+
+            <div class="text-center">
+                <div class="bg-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <span class="text-white text-2xl font-bold">2</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Przegląd wstępny</h3>
+                <p class="text-gray-600 text-sm">Oględziny instalacji i ocena zakresu pomiarów</p>
+            </div>
+
+            <div class="text-center">
+                <div class="bg-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <span class="text-white text-2xl font-bold">3</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Wykonanie pomiarów</h3>
+                <p class="text-gray-600 text-sm">Profesjonalne pomiary specjalistyczną aparaturą</p>
+            </div>
+
+            <div class="text-center">
+                <div class="bg-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <span class="text-white text-2xl font-bold">4</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Protokół pomiarowy</h3>
+                <p class="text-gray-600 text-sm">Sporządzenie dokumentacji i wydanie protokołu</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Equipment -->
+<section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Profesjonalny sprzęt pomiarowy</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+            <div>
+                <img src="{{ url_for('static', filename='images/pomiar-instalacji-elektrycznej.jpg') }}"
+                     alt="Pomiary instalacji elektrycznej - profesjonalny sprzęt pomiarowy Gdańsk"
+                     class="w-full h-80 rounded-lg object-cover shadow-lg">
+            </div>
+                        <div>
+                <h3 class="text-2xl font-semibold text-primary mb-6">Precyzyjne pomiary z najnowszym sprzętem</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    Wykorzystujemy profesjonalną aparaturę pomiarową najwyższej klasy, która gwarantuje
+                    dokładne i wiarygodne wyniki. Każdy przyrząd posiada aktualne certyfikaty kalibracji
+                    i jest zgodny z obowiązującymi normami.
+                </p>
+
+                <ul class="space-y-3 text-gray-700 mb-6">
+                    <li class="flex items-center">
+                        <i class="fas fa-certificate text-blue-500 mr-3"></i>
+                        Używamy certyfikowanego sprzętu
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-cog text-blue-500 mr-3"></i>
+                        Najnowsza technologia pomiarowa
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-chart-line text-blue-500 mr-3"></i>
+                        Wysoka dokładność pomiarów
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-file-alt text-blue-500 mr-3"></i>
+                        Automatyczna dokumentacja
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-thumbs-up text-blue-500 mr-3"></i>
+                        Zgodność z normami PN-HD
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Documentation -->
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Dokumentacja pomiarowa</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-primary mb-4">Protokół pomiarowy zawiera:</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li>• Wyniki wszystkich pomiarów</li>
+                    <li>• Ocenę stanu instalacji</li>
+                    <li>• Uwagi i zalecenia</li>
+                    <li>• Dane techniczne instalacji</li>
+                    <li>• Podpis uprawnionego elektryka</li>
+                    <li>• Pieczęć firmową</li>
+                </ul>
+            </div>
+
+            <div class="bg-green-50 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-green-700 mb-4">Zastosowanie protokołu:</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li>• Kontrole sanepidowskie</li>
+                    <li>• Kontrole PIP</li>
+                    <li>• Ubezpieczenia nieruchomości</li>
+                    <li>• Sprzedaż/kupno nieruchomości</li>
+                    <li>• Kontrole ZUS</li>
+                    <li>• Dokumentacja BHP</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing -->
+<section class="py-16 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="bg-primary text-white p-6 text-center">
+                <h3 class="text-2xl font-bold">Cennik pomiarów</h3>
+            </div>
+
+            <div class="p-8">
+                <div class="space-y-6">
+                    <div class="flex justify-between items-center border-b pb-3">
+                        <span class="font-medium">Mieszkanie do 50 m²</span>
+                        <span class="text-primary font-bold">od 400 zł</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b pb-3">
+                        <span class="font-medium">Dom jednorodzinny</span>
+                        <span class="text-primary font-bold">od 600 zł</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b pb-3">
+                        <span class="font-medium">Lokal użytkowy</span>
+                        <span class="text-primary font-bold">od 800 zł</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium">Zakład pracy</span>
+                        <span class="text-primary font-bold">wycena indywidualna</span>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <p class="text-gray-600 mb-4">Ceny zawierają protokół pomiarowy i dojazd na terenie Trójmiasta</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">Potrzebujesz pomiarów elektrycznych?</h2>
+        <p class="text-xl mb-8 opacity-90">
+            Skontaktuj się z nami już dziś i umów wizytę
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+48664883028" class="bg-accent text-white px-8 py-4 rounded-lg text-xl font-bold hover:bg-red-700 transition duration-300">
+                <i class="fas fa-phone mr-3"></i>664 883 028
+            </a>
+            <a href="{{ url_for('main.contact') }}" class="bg-white text-primary px-8 py-4 rounded-lg text-xl font-semibold hover:bg-gray-100 transition duration-300">
+                <i class="fas fa-envelope mr-3"></i>Formularz kontaktowy
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

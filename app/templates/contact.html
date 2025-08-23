@@ -1,0 +1,275 @@
+{% extends "base.html" %}
+
+{% block title %}Kontakt - Elektryk Gdańsk | Tel. 664 883 028 | Faza-Ekspert{% endblock %}
+
+{% block description %}📞 Skontaktuj się z elektrykiem Gdańsk ⚡ Tel. 664 883 028 ⚡ ul. Racławicka 9/5 Gdańsk ⚡ elektryk@faza-ekspert.pl ⚡ Obsługujemy Trójmiasto 24/7 ⚡ Darmowa wycena!{% endblock %}
+
+{% block keywords %}kontakt elektryk Gdańsk, telefon elektryk, elektryk Racławicka Gdańsk, elektryk Trójmiasto kontakt, pogotowie elektryczne telefon, elektryk Gdańsk adres, elektryk@faza-ekspert.pl{% endblock %}
+
+{% block structured_data %}
+{
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+        "@type": "LocalBusiness",
+        "name": "Faza-Ekspert sp. z o.o.",
+        "telephone": "+48664883028",
+        "email": "elektryk@faza-ekspert.pl",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Racławicka 9/5",
+            "addressLocality": "Gdańsk",
+            "postalCode": "80-280",
+            "addressCountry": "PL"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 54.372158,
+            "longitude": 18.638306
+        },
+        "openingHours": "Mo-Su 09:00-21:00",
+        "hasMap": "https://www.google.com/maps/place/Racławicka+9,+80-280+Gdańsk",
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Gdańsk"
+            },
+            {
+                "@type": "City",
+                "name": "Gdynia"
+            },
+            {
+                "@type": "City",
+                "name": "Sopot"
+            }
+        ]
+    }
+}
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-primary to-blue-600 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">KONTAKT Z FIRMĄ FAZA-EKSPERT</h1>
+        <p class="text-xl opacity-90">Skontaktuj się z nami już dziś</p>
+    </div>
+</section>
+
+<!-- Contact Information -->
+<section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Contact Details -->
+            <div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-8">Dane kontaktowe</h2>
+
+                <div class="space-y-8">
+                    <!-- Company Address -->
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-primary rounded-full p-3 flex-shrink-0">
+                            <i class="fas fa-building text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Siedziba firmy</h3>
+                            <p class="text-gray-600">
+                                Faza-Ekspert sp. z o.o.<br>
+                                ul. Racławicka 9/5<br>
+                                80-280 Gdańsk
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-accent rounded-full p-3 flex-shrink-0">
+                            <i class="fas fa-phone text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Telefon</h3>
+                            <p class="text-gray-600">
+                                <a href="tel:+48664883028" class="text-2xl font-bold text-accent hover:text-red-700 transition duration-300">
+                                    664 883 028
+                                </a>
+                            </p>
+                            <p class="text-sm text-gray-500 mt-1">Dostępni 7 dni w tygodniu</p>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-secondary rounded-full p-3 flex-shrink-0">
+                            <i class="fas fa-envelope text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">E-mail</h3>
+                            <p class="text-gray-600">
+                                <a href="mailto:elektryk@faza-ekspert.pl" class="text-lg text-secondary hover:text-yellow-600 transition duration-300">
+                                    elektryk@faza-ekspert.pl
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- NIP -->
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-gray-600 rounded-full p-3 flex-shrink-0">
+                            <i class="fas fa-file-invoice text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">NIP</h3>
+                            <p class="text-gray-600 font-mono text-lg">796-302-88-52</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-8">Wyślij wiadomość</h2>
+
+                <form class="space-y-6" action="#" method="POST">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Imię i nazwisko *</label>
+                        <input type="text" id="name" name="name" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary transition duration-300">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">E-mail *</label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary transition duration-300">
+                    </div>
+
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Telefon</label>
+                        <input type="tel" id="phone" name="phone"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary transition duration-300">
+                    </div>
+
+                    <div>
+                        <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Rodzaj usługi</label>
+                        <select id="service" name="service"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary transition duration-300">
+                            <option value="">Wybierz usługę</option>
+                            <option value="pomiary">Pomiary elektryczne</option>
+                            <option value="instalacje">Instalacje elektryczne</option>
+                            <option value="pogotowie">Pogotowie elektryczne</option>
+                            <option value="smart-home">Smart Home</option>
+                            <option value="informatyka">Usługi informatyczne</option>
+                            <option value="inne">Inne</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Wiadomość *</label>
+                        <textarea id="message" name="message" rows="5" required
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary transition duration-300"
+                                  placeholder="Opisz swoje potrzeby..."></textarea>
+                    </div>
+
+                    <div class="flex items-center">
+                        <input type="checkbox" id="privacy" name="privacy" required
+                               class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded">
+                        <label for="privacy" class="ml-2 block text-sm text-gray-700">
+                            Wyrażam zgodę na przetwarzanie danych osobowych *
+                        </label>
+                    </div>
+
+                    <button type="submit"
+                            class="w-full bg-primary text-white py-3 px-6 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">
+                        Wyślij wiadomość
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Business Hours -->
+<section class="py-16 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Godziny pracy</h2>
+
+        <div class="bg-white rounded-lg shadow-md p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Regular Hours -->
+                <div class="text-center">
+                    <div class="bg-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Standardowe godziny pracy</h3>
+                    <div class="space-y-2 text-gray-600">
+                        <p><strong>Poniedziałek - Niedziela:</strong></p>
+                        <p class="text-2xl font-bold text-primary">9:00 - 21:00</p>
+                    </div>
+                </div>
+
+                <!-- Emergency Hours -->
+                <div class="text-center">
+                    <div class="bg-accent rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-car-on text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Pogotowie elektryczne</h3>
+                    <div class="space-y-2 text-gray-600">
+                        <p><strong>Dostępne:</strong></p>
+                        <p class="text-2xl font-bold text-accent">24h / 7 dni</p>
+                        <p class="text-sm">W nagłych przypadkach</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Areas -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Obszary obsługi</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Gdansk -->
+            <div class="text-center bg-gray-50 p-8 rounded-lg">
+                <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-map-marker-alt text-white text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Gdańsk</h3>
+            </div>
+
+            <!-- Gdynia -->
+            <div class="text-center bg-gray-50 p-8 rounded-lg">
+                <div class="bg-secondary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-map-marker-alt text-white text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Gdynia</h3>
+            </div>
+
+            <!-- Sopot -->
+            <div class="text-center bg-gray-50 p-8 rounded-lg">
+                <div class="bg-green-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-map-marker-alt text-white text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Sopot</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Contact -->
+<section class="py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">Potrzebujesz natychmiastowej pomocy?</h2>
+        <p class="text-xl mb-8 opacity-90">
+            Zadzwoń do nas - jesteśmy dostępni 7 dni w tygodniu
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+48664883028" class="bg-accent text-white px-8 py-4 rounded-lg text-xl font-bold hover:bg-red-700 transition duration-300">
+                <i class="fas fa-phone mr-3"></i>664 883 028
+            </a>
+            <a href="mailto:elektryk@faza-ekspert.pl" class="bg-secondary text-white px-8 py-4 rounded-lg text-xl font-semibold hover:bg-yellow-600 transition duration-300">
+                <i class="fas fa-envelope mr-3"></i>Wyślij e-mail
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

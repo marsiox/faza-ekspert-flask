@@ -1,0 +1,16 @@
+app/
+├── static/
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── templates/
+│   ├── base.html
+│   ├── index.html
+│   ├── services.html
+│   ├── about.html
+│   └── contact.html
+├── __init__.py
+└── routes.py
+requirements.txt
+run.py
+README.md

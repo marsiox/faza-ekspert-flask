@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+
+{% block title %}Wycena Online - Bezpłatna Wycena Usług Elektrycznych | Faza-Ekspert{% endblock %}
+
+{% block description %}💰 Darmowa wycena online usług elektrycznych ⚡ Kalkulator kosztów instalacji ⚡ Odpowiedź w 24h ⚡ Elektryk Gdańsk ⚡ Pomiary, instalacje, smart home ⚡ Profesjonalna wycena{% endblock %}
+
+{% block keywords %}wycena elektryka online, kalkulator kosztów elektrycznych, darmowa wycena instalacji, wycena pomiarów elektrycznych, koszt elektryka Gdańsk, cennik usług elektrycznych, bezpłatna wycena{% endblock %}
+
+{% block structured_data %}
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Wycena usług elektrycznych",
+    "name": "Bezpłatna wycena online",
+    "description": "Darmowe oszacowanie kosztów usług elektrycznych. Odpowiedź w ciągu 24 godzin.",
+    "provider": {
+        "@type": "LocalBusiness",
+        "name": "Faza-Ekspert sp. z o.o.",
+        "telephone": "+48664883028",
+        "email": "elektryk@faza-ekspert.pl"
+    },
+    "offers": {
+        "@type": "Offer",
+        "name": "Darmowa wycena",
+        "price": "0",
+        "priceCurrency": "PLN",
+        "description": "Bezpłatne przygotowanie kosztorysu usług elektrycznych"
+    },
+    "areaServed": ["Gdańsk", "Gdynia", "Sopot"],
+    "additionalProperty": [
+        {
+            "@type": "PropertyValue",
+            "name": "Czas odpowiedzi",
+            "value": "24 godziny"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Koszt wyceny",
+            "value": "Bezpłatna"
+        }
+    ]
+}
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-secondary to-yellow-600 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">WYCENA ONLINE</h1>
+        <p class="text-xl opacity-90">Otrzymaj bezpłatną wycenę w 24 godziny</p>
+    </div>
+</section>
+
+<!-- Quote Form -->
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gray-50 rounded-lg p-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Kalkulator wyceny</h2>
+
+            <form class="space-y-6" action="#" method="POST">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="quote-name" class="block text-sm font-medium text-gray-700 mb-2">Imię i nazwisko *</label>
+                        <input type="text" id="quote-name" name="name" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-secondary focus:border-secondary transition duration-300">
+                    </div>
+
+                    <div>
+                        <label for="quote-email" class="block text-sm font-medium text-gray-700 mb-2">E-mail *</label>
+                        <input type="email" id="quote-email" name="email" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-secondary focus:border-secondary transition duration-300">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="quote-phone" class="block text-sm font-medium text-gray-700 mb-2">Telefon *</label>
+                        <input type="tel" id="quote-phone" name="phone" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-secondary focus:border-secondary transition duration-300">
+                    </div>
+
+                    <div>
+                        <label for="quote-city" class="block text-sm font-medium text-gray-700 mb-2">Miasto *</label>
+                        <select id="quote-city" name="city" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-secondary focus:border-secondary transition duration-300">
+                            <option value="">Wybierz miasto</option>
+                            <option value="gdansk">Gdańsk</option>
+                            <option value="gdynia">Gdynia</option>
+                            <option value="sopot">Sopot</option>
+                            <option value="inne">Inne</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="quote-service" class="block text-sm font-medium text-gray-700 mb-2">Rodzaj usługi *</label>
+                    <select id="quote-service" name="service" required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-secondary focus:border-secondary transition duration-300">
+                        <option value="">Wybierz usługę</option>
+                        <option value="pomiary-okresowe">Pomiary okresowe</option>
+                        <option value="pomiary-odbiorcze">Pomiary odbiorcze</option>
+                        <option value="instalacja-nowa">Instalacja elektryczna - nowa</option>
+                        <option value="instalacja-modernizacja">Modernizacja instalacji</option>
+                        <option value="oswietlenie">Montaż oświetlenia</option>
+                        <option value="gniazdka">Przenoszenie gniazdek</option>
+                        <option value="rozdzielnica">Montaż rozdzielnicy</option>
+                        <option value="smart-home">Smart Home</option>
+                        <option value="sieciowe">Okablowanie sieciowe</option>
+                        <option value="inne">Inne</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="quote-property" class="block text-sm font-medium text-gray-700 mb-2">Typ nieruchomości</label>
+                    <select id="quote-property" name="property"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-secondary focus:border-secondary transition duration-300">
+                        <option value="">Wybierz typ</option>
+                        <option value="dom-jednorodzinny">Dom jednorodzinny</option>
+                        <option value="mieszkanie">Mieszkanie</option>
+                        <option value="biuro">Biuro</option>
+                        <option value="lokal-handlowy">Lokal handlowy</option>
+                        <option value="fabryka">Fabryka/Zakład</option>
+                        <option value="inne">Inne</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="quote-area" class="block text-sm font-medium text-gray-700 mb-2">Powierzchnia (m²)</label>
+                    <input type="number" id="quote-area" name="area" min="1"
+                           class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-secondary focus:border-secondary transition duration-300"
+                           placeholder="np. 100">
+                </div>
+
+                <div>
+                    <label for="quote-description" class="block text-sm font-medium text-gray-700 mb-2">Szczegółowy opis prac *</label>
+                    <textarea id="quote-description" name="description" rows="5" required
+                              class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-secondary focus:border-secondary transition duration-300"
+                              placeholder="Opisz dokładnie jakie prace mają być wykonane, lokalizację, ilość punktów elektrycznych itp."></textarea>
+                </div>
+
+                <div>
+                    <label for="quote-deadline" class="block text-sm font-medium text-gray-700 mb-2">Preferowany termin realizacji</label>
+                    <select id="quote-deadline" name="deadline"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-secondary focus:border-secondary transition duration-300">
+                        <option value="">Wybierz termin</option>
+                        <option value="natychmiast">Jak najszybciej</option>
+                        <option value="tydzien">W ciągu tygodnia</option>
+                        <option value="miesiac">W ciągu miesiąca</option>
+                        <option value="kwartał">W ciągu kwartału</option>
+                        <option value="elastyczny">Elastyczny termin</option>
+                    </select>
+                </div>
+
+                <div class="flex items-center">
+                    <input type="checkbox" id="quote-privacy" name="privacy" required
+                           class="h-4 w-4 text-secondary focus:ring-secondary border-gray-300 rounded">
+                    <label for="quote-privacy" class="ml-2 block text-sm text-gray-700">
+                        Wyrażam zgodę na przetwarzanie danych osobowych w celu przygotowania wyceny *
+                    </label>
+                </div>
+
+                <button type="submit"
+                        class="w-full bg-secondary text-white py-4 px-6 rounded-md hover:bg-yellow-600 transition duration-300 font-semibold text-lg">
+                    Wyślij zapytanie o wycenę
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits -->
+<section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Dlaczego warto skorzystać z naszej wyceny?</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-secondary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-gift text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Bezpłatna wycena</h3>
+                <p class="text-gray-600">Przygotowanie kosztorysu jest całkowicie darmowe i nie zobowiązuje do skorzystania z usług</p>
+            </div>
+
+            <div class="text-center bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-clock text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Szybka odpowiedź</h3>
+                <p class="text-gray-600">Wycenę otrzymasz w ciągu 24 godzin od złożenia zapytania</p>
+            </div>
+
+            <div class="text-center bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-green-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-calculator text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Dokładna wycena</h3>
+                <p class="text-gray-600">Precyzyjne oszacowanie kosztów z uwzględnieniem wszystkich czynników</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">Masz pytania dotyczące wyceny?</h2>
+        <p class="text-xl mb-8 opacity-90">
+            Skontaktuj się z nami telefonicznie - chętnie odpowiemy na wszystkie pytania
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+48664883028" class="bg-accent text-white px-8 py-4 rounded-lg text-xl font-bold hover:bg-red-700 transition duration-300">
+                <i class="fas fa-phone mr-3"></i>664 883 028
+            </a>
+            <a href="{{ url_for('main.contact') }}" class="bg-white text-primary px-8 py-4 rounded-lg text-xl font-semibold hover:bg-gray-100 transition duration-300">
+                <i class="fas fa-envelope mr-3"></i>Formularz kontaktowy
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

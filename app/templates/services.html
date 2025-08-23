@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+
+{% block title %}Usługi Elektryczne Gdańsk - Instalacje, Pomiary, Smart Home | Faza-Ekspert{% endblock %}
+
+{% block description %}⚡ Kompleksowe usługi elektryczne Gdańsk ⚡ Instalacje elektryczne ⚡ Pomiary okresowe ⚡ Smart Home ⚡ Okablowanie sieciowe ⚡ Montaż szaf serwerowych ⚡ Doświadczeni elektrycy Trójmiasto{% endblock %}
+
+{% block keywords %}usługi elektryczne Gdańsk, instalacje elektryczne Gdańsk, pomiary elektryczne, smart home Gdańsk, automatyka domowa, okablowanie sieciowe, montaż szaf serwerowych, modernizacja instalacji, systemy inteligentnego domu, serwery rack, patch panel{% endblock %}
+
+{% block structured_data %}
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Usługi elektryczne i informatyczne",
+    "provider": {
+        "@type": "LocalBusiness",
+        "name": "Faza-Ekspert sp. z o.o.",
+        "telephone": "+48664883028",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Racławicka 9/5",
+            "addressLocality": "Gdańsk",
+            "postalCode": "80-280",
+            "addressCountry": "PL"
+        }
+    },
+    "areaServed": ["Gdańsk", "Gdynia", "Sopot", "Trójmiasto"],
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Usługi elektryczne i informatyczne",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Instalacje elektryczne",
+                    "description": "Montaż i modernizacja instalacji elektrycznych w domach, biurach i zakładach przemysłowych"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Pomiary elektryczne",
+                    "description": "Regularne pomiary i kontrole instalacji elektrycznych zgodnie z normami"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Smart Home",
+                    "description": "Systemy inteligentnego domu dostosowane do potrzeb klienta"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Okablowanie sieciowe",
+                    "description": "Profesjonalne okablowanie sieciowe i montaż infrastruktury IT"
+                }
+            }
+        ]
+    }
+}
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-primary to-blue-600 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">USŁUGI ELEKTRYCZNE I INFORMATYCZNE</h1>
+        <p class="text-xl opacity-90">Kompleksowe rozwiązania dla Twojego domu i firmy</p>
+    </div>
+</section>
+
+<!-- Services Content -->
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg max-w-none">
+            <p class="text-lg text-gray-700 mb-8">
+                Firma Faza-Ekspert świadczy szeroki zakres usług, obejmujący:
+            </p>
+
+            <div class="space-y-8">
+                <!-- Electrical Installations -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-primary mb-4 flex items-center">
+                        <i class="fas fa-tools mr-3"></i>
+                        Instalacje elektryczne
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Montaż i modernizacja instalacji elektrycznych w domach, biurach i zakładach przemysłowych.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Modernizacja starych instalacji</li>
+                        <li>Przenoszenie gniazdek i liczników</li>
+                        <li>Montaż oświetlenia</li>
+                        <li>Składanie rozdzielnic</li>
+                        <li>Instalacje w nowych budynkach</li>
+                        <li>Modernizacja oświetlenia na LED</li>
+                    </ul>
+                </div>
+
+                <!-- Electrical Measurements -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-primary mb-4 flex items-center">
+                        <i class="fas fa-chart-line mr-3"></i>
+                        Pomiary elektryczne
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Regularne pomiary i kontrole instalacji elektrycznych, aby zapewnić ich bezpieczeństwo i zgodność z normami.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Pomiary okresowe i odbiorcze</li>
+                        <li>Pomiary instalacji odgromowej</li>
+                        <li>Pomiary prądów zabezpieczających</li>
+                        <li>Pomiary oświetlenia awaryjnego</li>
+                        <li>Pomiary rezystancji izolacji</li>
+                        <li>Pomiary impedancji pętli zwarciowej</li>
+                    </ul>
+                </div>
+
+                <!-- Emergency Services -->
+                <div class="bg-red-50 p-6 rounded-lg border-l-4 border-accent">
+                    <h3 class="text-2xl font-bold text-accent mb-4 flex items-center">
+                        <i class="fas fa-car-on mr-3"></i>
+                        Trójmiejskie Pogotowie Elektryczne
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Szybka i skuteczna pomoc w awariach elektrycznych. Dostępni 24/7 na terenie Trójmiasta.
+                    </p>
+                    <div class="bg-white p-4 rounded-md">
+                        <p class="text-center text-xl font-bold text-accent">
+                            <i class="fas fa-phone mr-2"></i>
+                            664 883 028
+                        </p>
+                        <p class="text-center text-gray-600">Pogotowie dostępne 24h/7</p>
+                    </div>
+                </div>
+
+                <!-- Device Installation -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-primary mb-4 flex items-center">
+                        <i class="fas fa-plug mr-3"></i>
+                        Montaż urządzeń elektrycznych
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Profesjonalny montaż różnorodnych urządzeń elektrycznych, od prostych gniazdek po zaawansowane systemy automatyki domowej.
+                    </p>
+                </div>
+
+                <!-- IT Services -->
+                <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-primary">
+                    <h3 class="text-2xl font-bold text-primary mb-4 flex items-center">
+                        <i class="fas fa-server mr-3"></i>
+                        Usługi informatyczne
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Infrastruktura sieciowa:</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Montaż szaf serwerowych (rack)</li>
+                                <li>Okablowanie sieciowe</li>
+                                <li>Montaż gniazd sieciowych LAN</li>
+                                <li>Instalacja patch paneli</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Serwery i systemy:</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Instalacja serwerów</li>
+                                <li>Serwis i utrzymanie</li>
+                                <li>Systemy Smart Home</li>
+                                <li>Inteligentny Dom</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Smart Home -->
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+                    <h3 class="text-2xl font-bold text-green-700 mb-4 flex items-center">
+                        <i class="fas fa-home mr-3"></i>
+                        Systemy Smart Home (Inteligentny Dom)
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Systemy oparte na gotowych rozwiązaniach, dostosowane do potrzeb i możliwości finansowych klienta.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Inteligentne oświetlenie</li>
+                        <li>Automatyka rolet i żaluzji</li>
+                        <li>Systemy kontroli dostępu</li>
+                        <li>Monitoring i alarmy</li>
+                        <li>Sterowanie ogrzewaniem</li>
+                        <li>Integracja z aplikacjami mobilnymi</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-lg text-gray-700 mb-6">
+                    Zapraszamy do współpracy z firmą Faza-Ekspert. Dzięki naszemu doświadczeniu i
+                    zaangażowaniu możecie być pewni, że wasze zlecenia zostaną zrealizowane na wysokim poziomie.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="{{ url_for('main.contact') }}" class="bg-primary text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300">
+                        Skontaktuj się z nami
+                    </a>
+                    <a href="tel:+48664883028" class="bg-accent text-white px-8 py-3 rounded-md hover:bg-red-700 transition duration-300">
+                        <i class="fas fa-phone mr-2"></i>664 883 028
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Areas -->
+<section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Obszar działania</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-map-marker-alt text-4xl text-primary mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Gdańsk</h3>
+                <p class="text-gray-600">Centrum i wszystkie dzielnice</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-map-marker-alt text-4xl text-primary mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Gdynia</h3>
+                <p class="text-gray-600">Cała Gdynia i okolice</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-map-marker-alt text-4xl text-primary mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Sopot</h3>
+                <p class="text-gray-600">Sopot i sąsiednie gminy</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

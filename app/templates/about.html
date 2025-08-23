@@ -1,0 +1,261 @@
+{% extends "base.html" %}
+
+{% block title %}O nas - Historia Firmy Faza-Ekspert | Certyfikowani Elektrycy Gdańsk{% endblock %}
+
+{% block description %}🏢 Poznaj historię firmy Faza-Ekspert ⚡ Certyfikowani elektrycy z wieloletnim doświadczeniem ⚡ Misja: bezpieczeństwo i zadowolenie klientów ⚡ Uprawnienia SEP ⚡ Trójmiasto{% endblock %}
+
+{% block keywords %}historia Faza-Ekspert, o firmie elektryk Gdańsk, certyfikowani elektrycy, uprawnienia SEP, doświadczeni elektrycy Trójmiasto, misja firmy elektrycznej, wykwalifikowani elektrycy{% endblock %}
+
+{% block structured_data %}
+{
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+        "@type": "Organization",
+        "name": "Faza-Ekspert sp. z o.o.",
+        "foundingDate": "2020",
+        "founder": [
+            {
+                "@type": "Person",
+                "name": "Bartosz"
+            },
+            {
+                "@type": "Person",
+                "name": "Krzysztof"
+            }
+        ],
+        "description": "Faza-Ekspert to firma elektryczna założona przez dwóch przyjaciół ze szkoły średniej, specjalizująca się w kompleksowych usługach elektrycznych na terenie Trójmiasta.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Racławicka 9/5",
+            "addressLocality": "Gdańsk",
+            "postalCode": "80-280",
+            "addressCountry": "PL"
+        },
+        "telephone": "+48664883028",
+        "email": "elektryk@faza-ekspert.pl",
+        "areaServed": ["Gdańsk", "Gdynia", "Sopot"],
+        "knowsAbout": [
+            "Instalacje elektryczne",
+            "Pomiary elektryczne",
+            "Smart Home",
+            "Automatyka domowa",
+            "Pogotowie elektryczne"
+        ],
+        "hasCredential": [
+            {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Certyfikat SEP",
+                "recognizedBy": {
+                    "@type": "Organization",
+                    "name": "Stowarzyszenie Elektryków Polskich"
+                }
+            }
+        ]
+    }
+}
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-primary to-blue-600 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">HISTORIA FIRMY</h1>
+        <p class="text-xl opacity-90">Poznaj naszą historię i misję</p>
+    </div>
+</section>
+
+<!-- Company History -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div class="prose prose-lg max-w-none">
+                <div class="text-lg text-gray-700 space-y-6">
+                    <p>
+                        Faza-Ekspert sp. z o.o. została założona przez dwóch przyjaciół ze szkoły
+                        średniej, Bartosza i Krzysztofa, którzy od młodości fascynowali się technologią i
+                        komputerami.
+                    </p>
+
+                    <p>
+                        Po ukończeniu studiów na kierunkach technicznych i praktykach w kraju i za
+                        granicą, Bartosz i Krzysztof postanowili połączyć swoje siły i założyć własną firmę.
+                        W ten sposób narodziła się Faza-Ekspert, firma, która od początku stawiała na
+                        profesjonalizm, innowacyjność i pasję do pracy.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex justify-center lg:justify-end">
+                <img src="{{ url_for('static', filename='images/bartosz_i_krzysztof.jpg') }}"
+                     alt="Założyciele firmy Faza-Ekspert - Bartosz i Krzysztof"
+                     class="w-full max-w-md h-64 rounded-lg object-cover shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission Section -->
+<section class="py-16 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">MISJA FIRMY</h2>
+
+        <div class="bg-white p-8 rounded-lg shadow-md">
+            <p class="text-lg text-gray-700 mb-8">
+                Misją firmy Faza-Ekspert jest zapewnienie najwyższego poziomu satysfakcji
+                klientów poprzez dostarczanie profesjonalnych usług elektrycznych i komputerowych.
+                Nasze priorytety to:
+            </p>
+
+            <div class="space-y-8">
+                <!-- Customer Satisfaction -->
+                <div class="flex items-start space-x-4">
+                    <div class="bg-primary rounded-full p-3 flex-shrink-0">
+                        <i class="fas fa-heart text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Zadowolenie klienta</h3>
+                        <p class="text-gray-600">
+                            Dbamy o indywidualne podejście do każdego klienta, słuchając jego potrzeb i
+                            dostosowując nasze usługi do jego oczekiwań. Stawiamy na otwartą komunikację i
+                            pełną transparentność na każdym etapie realizacji zlecenia.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Affordable Prices -->
+                <div class="flex items-start space-x-4">
+                    <div class="bg-secondary rounded-full p-3 flex-shrink-0">
+                        <i class="fas fa-euro-sign text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Przystępne ceny</h3>
+                        <p class="text-gray-600">
+                            Wierzymy, że wysokiej jakości usługi elektryczne i komputerowe nie muszą wiązać
+                            się z wysokimi kosztami. Oferujemy konkurencyjne ceny, zachowując jednocześnie
+                            najwyższe standardy wykonania prac.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quality Work -->
+                <div class="flex items-start space-x-4">
+                    <div class="bg-green-500 rounded-full p-3 flex-shrink-0">
+                        <i class="fas fa-award text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Porządne wykonywanie prac</h3>
+                        <p class="text-gray-600">
+                            Nasz zespół składa się z wykwalifikowanych i certyfikowanych specjalistów,
+                            którzy podchodzą do swojej pracy z pełnym zaangażowaniem i dbałością o szczegóły.
+                            Używamy tylko sprawdzonych materiałów i nowoczesnych narzędzi, aby zapewnić
+                            niezawodność i trwałość naszych instalacji.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Values -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Nasze wartości</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Value 1 -->
+            <div class="text-center">
+                <div class="bg-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-shield-alt text-white text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Bezpieczeństwo</h3>
+                <p class="text-gray-600 text-sm">
+                    Wszystkie prace wykonujemy zgodnie z obowiązującymi normami i przepisami
+                </p>
+            </div>
+
+            <!-- Value 2 -->
+            <div class="text-center">
+                <div class="bg-secondary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-clock text-white text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Punktualność</h3>
+                <p class="text-gray-600 text-sm">
+                    Dotrzymujemy terminów i jesteśmy dostępni gdy nas potrzebujesz
+                </p>
+            </div>
+
+            <!-- Value 3 -->
+            <div class="text-center">
+                <div class="bg-green-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-handshake text-white text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Zaufanie</h3>
+                <p class="text-gray-600 text-sm">
+                    Budujemy długotrwałe relacje oparte na wzajemnym zaufaniu
+                </p>
+            </div>
+
+            <!-- Value 4 -->
+            <div class="text-center">
+                <div class="bg-purple-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-lightbulb text-white text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Innowacyjność</h3>
+                <p class="text-gray-600 text-sm">
+                    Stosujemy nowoczesne technologie i rozwiązania
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications -->
+<section class="py-16 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8">Certyfikaty i uprawnienia</h2>
+        <p class="text-lg text-gray-700 mb-8">
+            Nasz zespół posiada wszystkie niezbędne certyfikaty i uprawnienia do wykonywania prac elektrycznych
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-certificate text-4xl text-primary mb-4"></i>
+                <h3 class="text-lg font-semibold mb-2">Certyfikaty SEP</h3>
+                <p class="text-gray-600">Uprawnienia do pracy przy urządzeniach elektrycznych</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-graduation-cap text-4xl text-secondary mb-4"></i>
+                <h3 class="text-lg font-semibold mb-2">Wykształcenie techniczne</h3>
+                <p class="text-gray-600">Zespół z wykształceniem inżynierskim</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-tools text-4xl text-green-500 mb-4"></i>
+                <h3 class="text-lg font-semibold mb-2">Doświadczenie</h3>
+                <p class="text-gray-600">Wieloletnie doświadczenie w branży</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">Poznaj nas lepiej</h2>
+        <p class="text-xl mb-8 opacity-90">
+            Skontaktuj się z nami i przekonaj się o jakości naszych usług
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="{{ url_for('main.contact') }}" class="bg-white text-primary px-8 py-3 rounded-md hover:bg-gray-100 transition duration-300">
+                Skontaktuj się z nami
+            </a>
+            <a href="{{ url_for('main.services') }}" class="bg-secondary text-white px-8 py-3 rounded-md hover:bg-yellow-600 transition duration-300">
+                Zobacz nasze usługi
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

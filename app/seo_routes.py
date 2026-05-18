@@ -4,17 +4,15 @@ from app.routes import main
 @main.route('/robots.txt')
 def robots_txt():
     """Generate robots.txt file"""
-    content = """User-agent: *
+    from flask import request
+    content = f"""User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: {{ request.url_root }}sitemap.xml
+Sitemap: {request.url_root}sitemap.xml
 
 # Crawl-delay (optional)
 Crawl-delay: 1
-
-# Disallow admin areas (if any)
-# Disallow: /admin/
 """
     response = make_response(content)
     response.headers['Content-Type'] = 'text/plain'

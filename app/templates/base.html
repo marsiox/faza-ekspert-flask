@@ -125,16 +125,28 @@
     {% endblock %}
     </script>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
                     colors: {
                         primary: '#1e40af',
                         secondary: '#f59e0b',
                         accent: '#dc2626'
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -15px rgba(0,0,0,0.05)',
+                        'glow': '0 0 20px rgba(30, 64, 175, 0.5)',
                     }
                 }
             }
@@ -146,9 +158,9 @@
 
     {% block extra_head %}{% endblock %}
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 font-sans text-slate-800 antialiased selection:bg-primary selection:text-white">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full top-0 z-50" role="navigation" aria-label="Menu główne">
+    <nav class="bg-white/80 backdrop-blur-lg border-b border-gray-100 fixed w-full top-0 z-50 transition-all duration-300" role="navigation" aria-label="Menu główne">
         <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
@@ -160,13 +172,25 @@
                 </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="{{ url_for('main.index') }}" class="text-gray-700 hover:text-primary transition duration-300" aria-label="Strona główna">START</a>
-                    <a href="{{ url_for('main.services') }}" class="text-gray-700 hover:text-primary transition duration-300" aria-label="Usługi elektryczne">USŁUGI</a>
-                    <a href="{{ url_for('main.about') }}" class="text-gray-700 hover:text-primary transition duration-300" aria-label="O firmie">O NAS</a>
-                    <a href="{{ url_for('main.contact') }}" class="text-gray-700 hover:text-primary transition duration-300" aria-label="Kontakt">KONTAKT</a>
-                    <a href="tel:+48664883028" class="bg-accent text-white px-4 py-2 rounded-md hover:bg-red-700 transition duration-300" aria-label="Zadzwoń: 664 883 028">
-                        <i class="fas fa-phone mr-2" aria-hidden="true"></i>664 883 028
+                <div class="hidden md:flex items-center space-x-8 font-medium">
+                    <a href="{{ url_for('main.index') }}" class="text-slate-600 hover:text-primary transition-colors duration-300 relative group" aria-label="Strona główna">
+                        START
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="{{ url_for('main.services') }}" class="text-slate-600 hover:text-primary transition-colors duration-300 relative group" aria-label="Usługi elektryczne">
+                        USŁUGI
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="{{ url_for('main.about') }}" class="text-slate-600 hover:text-primary transition-colors duration-300 relative group" aria-label="O firmie">
+                        O NAS
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="{{ url_for('main.contact') }}" class="text-slate-600 hover:text-primary transition-colors duration-300 relative group" aria-label="Kontakt">
+                        KONTAKT
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="tel:+48664883028" class="bg-accent text-white px-6 py-2.5 rounded-full hover:bg-red-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-center" aria-label="Zadzwoń: 664 883 028">
+                        <i class="fas fa-phone mr-2 text-sm" aria-hidden="true"></i>664 883 028
                     </a>
                 </div>
 
@@ -199,51 +223,59 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer class="bg-slate-900 text-slate-300 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8">
                 <!-- Company Info -->
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Faza-Ekspert sp. z o.o.</h3>
-                    <p class="text-gray-300 mb-4">
+                    <img src="{{ url_for('static', filename='images/Faza-Ekspert-logo.svg') }}" alt="Faza-Ekspert Logo" width="200" height="40" loading="lazy" class="h-10 w-auto mb-6 brightness-0 invert opacity-90">
+                    <p class="text-slate-400 mb-6 leading-relaxed font-light">
                         Profesjonalne usługi elektryczne na terenie Trójmiasta.
-                        Certyfikowani elektrycy z wieloletnim doświadczeniem.
+                        Certyfikowani elektrycy z wieloletnim doświadczeniem dbający o Twoje bezpieczeństwo.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/profile.php?id=61561445850647" class="text-gray-400 hover:text-white transition duration-300">
-                            <i class="fab fa-facebook-f text-xl"></i>
+                        <a href="https://www.facebook.com/profile.php?id=61561445850647" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://www.linkedin.com/company/faza-ekspert-sp-z-o-o/" class="text-gray-400 hover:text-white transition duration-300">
-                            <i class="fab fa-linkedin-in text-xl"></i>
+                        <a href="https://www.linkedin.com/company/faza-ekspert-sp-z-o-o/" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Information Links -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">INFORMACJE</h4>
-                    <ul class="space-y-2">
-                        <li><a href="{{ url_for('main.about') }}" class="text-gray-300 hover:text-white transition duration-300">O nas</a></li>
-                        <li><a href="{{ url_for('main.services') }}" class="text-gray-300 hover:text-white transition duration-300">Usługi</a></li>
-                        <li><a href="{{ url_for('main.emergency') }}" class="text-gray-300 hover:text-white transition duration-300">Pogotowie elektryczne Gdańsk Gdynia Sopot</a></li>
-                        <li><a href="{{ url_for('main.measurements') }}" class="text-gray-300 hover:text-white transition duration-300">Pomiary elektryczne</a></li>
+                    <h4 class="text-white text-lg font-semibold mb-6 tracking-wide">INFORMACJE</h4>
+                    <ul class="space-y-3 font-light">
+                        <li><a href="{{ url_for('main.about') }}" class="text-slate-400 hover:text-primary transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary"></i>O nas</a></li>
+                        <li><a href="{{ url_for('main.services') }}" class="text-slate-400 hover:text-primary transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary"></i>Usługi</a></li>
+                        <li><a href="{{ url_for('main.emergency') }}" class="text-slate-400 hover:text-primary transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary"></i>Pogotowie elektryczne</a></li>
+                        <li><a href="{{ url_for('main.measurements') }}" class="text-slate-400 hover:text-primary transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary"></i>Pomiary elektryczne</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact Info -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">KONTAKT</h4>
-                    <div class="space-y-2 text-gray-300">
-                        <p>Pon - Nd 9:00 - 21:00</p>
-                        <p>Gdańsk ul. Racławicka 9/5</p>
+                    <h4 class="text-white text-lg font-semibold mb-6 tracking-wide">KONTAKT</h4>
+                    <div class="space-y-4 font-light text-slate-400">
+                        <p class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-3 text-primary"></i>
+                            <span>Pon - Nd 9:00 - 21:00</span>
+                        </p>
+                        <p class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                            <span>Gdańsk ul. Racławicka 9/5</span>
+                        </p>
                         <p>
-                            <a href="tel:+48664883028" class="hover:text-white transition duration-300">
-                                <i class="fas fa-phone mr-2"></i>664 883 028
+                            <a href="tel:+48664883028" class="flex items-start hover:text-primary transition-colors duration-300">
+                                <i class="fas fa-phone mt-1 mr-3 text-primary"></i>
+                                <span>664 883 028</span>
                             </a>
                         </p>
                         <p>
-                            <a href="mailto:elektryk@faza-ekspert.pl" class="hover:text-white transition duration-300">
-                                <i class="fas fa-envelope mr-2"></i>elektryk@faza-ekspert.pl
+                            <a href="mailto:elektryk@faza-ekspert.pl" class="flex items-start hover:text-primary transition-colors duration-300">
+                                <i class="fas fa-envelope mt-1 mr-3 text-primary"></i>
+                                <span>elektryk@faza-ekspert.pl</span>
                             </a>
                         </p>
                     </div>
@@ -251,16 +283,19 @@
             </div>
 
             <!-- CTA Section -->
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <h4 class="text-lg font-semibold mb-4">Potrzebujesz pomocy elektryka?</h4>
-                <a href="{{ url_for('main.contact') }}" class="inline-block bg-secondary text-white px-6 py-3 rounded-md hover:bg-yellow-600 transition duration-300">
-                    Skontaktuj się z nami
+            <div class="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center bg-slate-800/30 rounded-2xl p-8">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <h4 class="text-2xl font-bold text-white mb-2">Potrzebujesz pomocy elektryka?</h4>
+                    <p class="text-slate-400 font-light">Zadzwoń do nas, aby szybko rozwiązać swój problem.</p>
+                </div>
+                <a href="{{ url_for('main.contact') }}" class="inline-flex items-center justify-center bg-secondary text-white px-8 py-3 rounded-full font-medium hover:bg-yellow-500 hover:shadow-lg transition-all duration-300">
+                    Skontaktuj się z nami <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
 
             <!-- Copyright -->
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; Copyright 2025 Faza-Ekspert sp. z o.o.</p>
+            <div class="mt-8 text-center text-slate-500 text-sm font-light">
+                <p>&copy; Copyright 2025 Faza-Ekspert sp. z o.o. Wszelkie prawa zastrzeżone.</p>
             </div>
         </div>
     </footer>

@@ -6,6 +6,61 @@
 
 {% block keywords %}pogotowie elektryczne Gdańsk, awarie elektryczne, elektryk 24h, pogotowie elektryczne Gdynia, pogotowie elektryczne Sopot, awaria prądu, brak prądu, elektryk na telefon, nagły elektryk{% endblock %}
 
+{% block og_image %}{{ url_for('static', filename='images/pogotowie-elektryczne.jpg', _external=True) }}{% endblock %}
+
+{% block structured_data %}
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Pogotowie elektryczne 24/7",
+    "name": "Trójmiejskie Pogotowie Elektryczne",
+    "description": "Natychmiastowa pomoc w awariach elektrycznych na terenie Trójmiasta, dostępna 24 godziny na dobę, 7 dni w tygodniu.",
+    "provider": {
+        "@type": "LocalBusiness",
+        "name": "Faza-Ekspert sp. z o.o.",
+        "telephone": "+48664883028",
+        "email": "elektryk@faza-ekspert.pl",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Racławicka 9/5",
+            "addressLocality": "Gdańsk",
+            "postalCode": "80-280",
+            "addressCountry": "PL"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+        }
+    },
+    "areaServed": ["Gdańsk", "Gdynia", "Sopot", "Trójmiasto"]
+}
+{% endblock %}
+
+{% block extra_head %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Start",
+            "item": "{{ request.url_root }}"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pogotowie elektryczne",
+            "item": "{{ url_for('main.emergency', _external=True) }}"
+        }
+    ]
+}
+</script>
+{% endblock %}
+
 {% block content %}
 <!-- Hero Section -->
 <section class="bg-gradient-to-r from-accent to-red-700 text-white py-16">

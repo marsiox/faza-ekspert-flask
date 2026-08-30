@@ -6,13 +6,15 @@
 
 {% block keywords %}elektryk Gdańsk, elektryk Gdynia, elektryk Sopot, instalacje elektryczne Trójmiasto, pomiary elektryczne Gdańsk, pogotowie elektryczne Gdańsk, usługi budowlano-wykończeniowe Gdańsk, usługi wykończeniowe Trójmiasto, remonty Gdańsk, wykończenia wnętrz, malowanie wnętrz, układanie paneli, zabudowa gipsowo-kartonowa, smart home Gdańsk{% endblock %}
 
+{% block og_image %}{{ url_for('static', filename='images/wykonczenia-hero.jpg', _external=True) }}{% endblock %}
+
 {% block structured_data %}
 {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Faza-Ekspert sp. z o.o.",
     "alternateName": "Elektryk Gdańsk",
-    "image": "{{ url_for('static', filename='images/faza-ekspert-logo.jpg', _external=True) }}",
+    "image": "{{ url_for('static', filename='images/elektryk.jpg', _external=True) }}",
     "telephone": "+48664883028",
     "email": "elektryk@faza-ekspert.pl",
     "address": {
@@ -153,6 +155,7 @@
                 <div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-20 rounded-[2.5rem] blur-2xl group-hover:opacity-30 transition duration-500"></div>
                 <img src="{{ url_for('static', filename='images/elektryk.jpg') }}"
                      alt="Profesjonalny elektryk Gdańsk - Faza-Ekspert podczas pracy"
+                     width="1280" height="720" fetchpriority="high"
                      class="relative rounded-[2.5rem] shadow-2xl w-full object-cover h-[500px] border-8 border-white">
 
                 <!-- Floating Badge -->

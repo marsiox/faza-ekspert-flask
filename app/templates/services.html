@@ -6,6 +6,31 @@
 
 {% block keywords %}usługi elektryczne Gdańsk, instalacje elektryczne Gdańsk, pomiary elektryczne, smart home Gdańsk, automatyka domowa, okablowanie sieciowe, montaż szaf serwerowych, modernizacja instalacji, systemy inteligentnego domu, serwery rack, patch panel{% endblock %}
 
+{% block og_image %}{{ url_for('static', filename='images/instalacje-elektryczne.jpg', _external=True) }}{% endblock %}
+
+{% block extra_head %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Start",
+            "item": "{{ request.url_root }}"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Usługi elektryczne",
+            "item": "{{ url_for('main.services', _external=True) }}"
+        }
+    ]
+}
+</script>
+{% endblock %}
+
 {% block structured_data %}
 {
     "@context": "https://schema.org",
@@ -195,6 +220,20 @@
                         <li>Sterowanie ogrzewaniem</li>
                         <li>Integracja z aplikacjami mobilnymi</li>
                     </ul>
+                </div>
+                <!-- Finishing Services Cross-link -->
+                <div class="bg-amber-50 p-6 rounded-lg border-l-4 border-secondary">
+                    <h3 class="text-2xl font-bold text-secondary mb-4 flex items-center">
+                        <i class="fas fa-paint-roller mr-3"></i>
+                        Usługi budowlano-wykończeniowe
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Oprócz elektryki wykonujemy również prace wykończeniowe: malowanie wnętrz,
+                        układanie paneli podłogowych oraz zabudowy gipsowo-kartonowe.
+                    </p>
+                    <a href="{{ url_for('main.finishing') }}" class="inline-flex items-center text-secondary font-semibold hover:text-yellow-600 transition-colors">
+                        Zobacz ofertę wykończeniową <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
                 </div>
             </div>
 

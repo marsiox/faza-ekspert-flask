@@ -31,6 +31,20 @@ def measurements():
 def finishing():
     return render_template('finishing.html')
 
+# Error handlers
+@main.app_errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+@main.app_errorhandler(500)
+def internal_error(e):
+    response = make_response(
+        "Przepraszamy, wystąpił błąd serwera. Spróbuj ponownie później "
+        "lub zadzwoń: 664 883 028"
+    )
+    response.headers['Content-Type'] = 'text/plain; charset=utf-8'
+    return response
+
 # SEO Routes
 @main.route('/robots.txt')
 def robots_txt():

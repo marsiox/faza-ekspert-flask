@@ -6,6 +6,31 @@
 
 {% block keywords %}pomiary elektryczne Gdańsk, pomiary okresowe, pomiary odbiorcze, protokół pomiarowy, rezystancja izolacji, impedancja pętli zwarciowej, pomiary instalacji elektrycznych, elektryk pomiary Gdańsk, cena pomiarów elektrycznych{% endblock %}
 
+{% block og_image %}{{ url_for('static', filename='images/pomiary-elektryczne.jpg', _external=True) }}{% endblock %}
+
+{% block extra_head %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Start",
+            "item": "{{ request.url_root }}"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pomiary elektryczne",
+            "item": "{{ url_for('main.measurements', _external=True) }}"
+        }
+    ]
+}
+</script>
+{% endblock %}
+
 {% block structured_data %}
 {
     "@context": "https://schema.org",

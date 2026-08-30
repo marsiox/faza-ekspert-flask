@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}404 - Nie znaleziono strony | Faza-Ekspert{% endblock %}
+
+{% block extra_head %}
+<meta name="robots" content="noindex">
+{% endblock %}
+
+{% block content %}
+<!-- 404 Section -->
+<section class="py-32 bg-slate-50 relative overflow-hidden">
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <p class="text-8xl md:text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500 mb-6">404</p>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">Nie znaleziono strony</h1>
+        <p class="text-lg text-slate-600 font-light mb-10 leading-relaxed">
+            Strona, której szukasz, nie istnieje lub została przeniesiona.
+            Sprawdź naszą ofertę usług elektrycznych i wykończeniowych albo skontaktuj się z nami.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="{{ url_for('main.index') }}" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
+                Strona główna
+            </a>
+            <a href="{{ url_for('main.services') }}" class="bg-white text-slate-800 border border-slate-200 px-8 py-4 rounded-full text-lg font-semibold hover:bg-slate-50 hover:border-slate-300 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center">
+                Usługi elektryczne
+            </a>
+            <a href="tel:+48664883028" class="bg-accent text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
+                <i class="fas fa-phone mr-2" aria-hidden="true"></i>664 883 028
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

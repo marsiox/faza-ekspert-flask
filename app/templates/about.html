@@ -6,6 +6,31 @@
 
 {% block keywords %}historia Faza-Ekspert, o firmie elektryk Gdańsk, certyfikowani elektrycy, uprawnienia SEP, doświadczeni elektrycy Trójmiasto, misja firmy elektrycznej, wykwalifikowani elektrycy{% endblock %}
 
+{% block og_image %}{{ url_for('static', filename='images/bartosz_i_krzysztof.jpg', _external=True) }}{% endblock %}
+
+{% block extra_head %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Start",
+            "item": "{{ request.url_root }}"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "O nas",
+            "item": "{{ url_for('main.about', _external=True) }}"
+        }
+    ]
+}
+</script>
+{% endblock %}
+
 {% block structured_data %}
 {
     "@context": "https://schema.org",

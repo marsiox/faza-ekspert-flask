@@ -27,6 +27,10 @@ def emergency():
 def measurements():
     return render_template('measurements.html')
 
+@main.route('/uslugi-budowlano-wykonczeniowe')
+def finishing():
+    return render_template('finishing.html')
+
 # SEO Routes
 @main.route('/robots.txt')
 def robots_txt():
@@ -54,6 +58,7 @@ def sitemap():
         {'url': '/kontakt', 'changefreq': 'monthly', 'priority': '0.9'},
         {'url': '/pogotowie-elektryczne-trójmiasto', 'changefreq': 'monthly', 'priority': '0.9'},
         {'url': '/pomiary-elektryczne', 'changefreq': 'monthly', 'priority': '0.9'},
+        {'url': '/uslugi-budowlano-wykonczeniowe', 'changefreq': 'monthly', 'priority': '0.9'},
     ]
 
     current_date = datetime.now().strftime('%Y-%m-%d')

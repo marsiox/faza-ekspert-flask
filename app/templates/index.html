@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}Elektryk Gdańsk | Pomiary Elektryczne Trójmiasto | Faza-Ekspert{% endblock %}
+{% block title %}Elektryk i Usługi Wykończeniowe Gdańsk | Faza-Ekspert{% endblock %}
 
-{% block description %}Elektryk Gdańsk ⚡ Pomiary elektryczne ⚡ Instalacje elektryczne ⚡ Pogotowie elektryczne 24/7 ⚡ Gdańsk, Gdynia, Sopot{% endblock %}
+{% block description %}Elektryk Gdańsk ⚡ Usługi budowlano-wykończeniowe ⚡ Pomiary i instalacje elektryczne ⚡ Pogotowie 24/7 ⚡ Gdańsk, Gdynia, Sopot{% endblock %}
 
-{% block keywords %}elektryk Gdańsk, elektryk Gdynia, elektryk Sopot, instalacje elektryczne Trójmiasto, pomiary elektryczne Gdańsk, pogotowie elektryczne Gdańsk, elektryczne awarie, montaż rozdzielnic, modernizacja instalacji, pomiary okresowe, elektryk 24h, smart home Gdańsk, automatyka domowa{% endblock %}
+{% block keywords %}elektryk Gdańsk, elektryk Gdynia, elektryk Sopot, instalacje elektryczne Trójmiasto, pomiary elektryczne Gdańsk, pogotowie elektryczne Gdańsk, usługi budowlano-wykończeniowe Gdańsk, usługi wykończeniowe Trójmiasto, remonty Gdańsk, wykończenia wnętrz, malowanie wnętrz, układanie paneli, zabudowa gipsowo-kartonowa, smart home Gdańsk{% endblock %}
 
 {% block structured_data %}
 {
@@ -48,7 +48,7 @@
             "name": "Sopot"
         }
     ],
-    "serviceType": "Elektryczne",
+    "serviceType": ["Elektryczne", "Budowlano-wykończeniowe"],
     "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
@@ -107,6 +107,14 @@
                     "name": "Pogotowie elektryczne 24/7",
                     "description": "Natychmiastowa pomoc w awariach elektrycznych na terenie Trójmiasta"
                 }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Usługi budowlano-wykończeniowe Gdańsk",
+                    "description": "Prace remontowe i wykończeniowe wnętrz: malowanie, podłogi, zabudowy g-k"
+                }
             }
         ]
     }
@@ -127,13 +135,13 @@
             <div>
                 <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-50 text-primary text-sm font-semibold mb-8 border border-blue-100 shadow-sm">
                     <span class="flex w-2 h-2 rounded-full bg-accent mr-2 animate-pulse"></span>
-                    Profesjonalne usługi elektryczne
+                    Usługi elektryczne i wykończeniowe
                 </div>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-slate-900 leading-tight tracking-tight">
-                    Twój zaufany <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">Elektryk w Gdańsku</span>
+                    Prace <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">Elektryczne i Wykończeniowe w Gdańsku</span>
                 </h1>
                 <p class="text-lg md:text-xl text-slate-600 mb-10 font-light leading-relaxed max-w-lg">
-                    Kompleksowe instalacje i precyzyjne pomiary elektryczne na terenie całego Trójmiasta. Szybko, bezpiecznie i z gwarancją jakości.
+                    Kompleksowe instalacje i pomiary elektryczne oraz prace budowlano-wykończeniowe na terenie całego Trójmiasta. Szybko, solidnie i z gwarancją jakości.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="{{ url_for('main.emergency') }}" class="group bg-accent text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center flex items-center justify-center">
@@ -170,82 +178,176 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <h2 class="text-sm font-bold text-primary uppercase tracking-widest mb-2">Nasza Oferta</h2>
-            <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900">Usługi Elektryczne Trójmiasto</h3>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900">Usługi Elektryczne i Wykończeniowe Trójmiasto</h3>
             <div class="w-24 h-1 bg-secondary mx-auto mt-6 rounded-full"></div>
         </div>
 
+        <h4 class="text-2xl font-bold text-slate-900 mb-8 flex items-center">
+            <span class="w-10 h-10 bg-blue-50 text-primary rounded-xl flex items-center justify-center mr-4">
+                <i class="fas fa-bolt" aria-hidden="true"></i>
+            </span>
+            Usługi elektryczne
+        </h4>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Service 1 -->
-            <article class="bg-white p-8 rounded-3xl border border-slate-100 shadow-soft hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
-                <div class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-blue-50 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
-                <div class="w-16 h-16 bg-blue-50 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300 relative z-10">
-                    <i class="fas fa-chart-line text-2xl" aria-hidden="true"></i>
+            <article class="bg-white rounded-3xl border border-slate-100 shadow-soft hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
+                <div class="overflow-hidden">
+                    <img src="{{ url_for('static', filename='images/pomiary-elektryczne.jpg') }}"
+                         alt="Pomiary elektryczne Gdańsk - elektryk wykonujący pomiar instalacji"
+                         width="600" height="400" loading="lazy"
+                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-slate-900 relative z-10">Pomiary Elektryczne</h3>
-                <ul class="text-slate-600 space-y-3 font-light relative z-10">
-                    <li class="flex items-start">
-                        <i class="fas fa-check text-primary mt-1 mr-3 text-sm"></i>
-                        <span>Okresowe i odbiorcze</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check text-primary mt-1 mr-3 text-sm"></i>
-                        <span>Instalacji odgromowej</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check text-primary mt-1 mr-3 text-sm"></i>
-                        <span>Prądów zabezpieczających</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check text-primary mt-1 mr-3 text-sm"></i>
-                        <span>Oświetlenia awaryjnego</span>
-                    </li>
-                </ul>
+                <div class="p-8 relative">
+                    <div class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-blue-50 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="w-16 h-16 bg-blue-50 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300 relative z-10">
+                        <i class="fas fa-chart-line text-2xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-900 relative z-10">Pomiary Elektryczne</h3>
+                    <ul class="text-slate-600 space-y-3 font-light relative z-10">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-3 text-sm"></i>
+                            <span>Okresowe i odbiorcze</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-3 text-sm"></i>
+                            <span>Instalacji odgromowej</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-3 text-sm"></i>
+                            <span>Prądów zabezpieczających</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-3 text-sm"></i>
+                            <span>Oświetlenia awaryjnego</span>
+                        </li>
+                    </ul>
+                </div>
             </article>
 
             <!-- Service 2 -->
-            <article class="bg-white p-8 rounded-3xl border border-slate-100 shadow-soft hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
-                <div class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-amber-50 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
-                <div class="w-16 h-16 bg-amber-50 text-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors duration-300 relative z-10">
-                    <i class="fas fa-tools text-2xl" aria-hidden="true"></i>
+            <article class="bg-white rounded-3xl border border-slate-100 shadow-soft hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
+                <div class="overflow-hidden">
+                    <img src="{{ url_for('static', filename='images/instalacje-elektryczne.jpg') }}"
+                         alt="Instalacje elektryczne Trójmiasto - montaż rozdzielnicy elektrycznej"
+                         width="600" height="400" loading="lazy"
+                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-slate-900 relative z-10">Instalacje Elektryczne</h3>
-                <ul class="text-slate-600 space-y-3 font-light relative z-10">
-                    <li class="flex items-start">
-                        <i class="fas fa-check text-secondary mt-1 mr-3 text-sm"></i>
-                        <span>Modernizacja instalacji</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check text-secondary mt-1 mr-3 text-sm"></i>
-                        <span>Przenoszenie gniazdek</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check text-secondary mt-1 mr-3 text-sm"></i>
-                        <span>Montaż oświetlenia LED</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check text-secondary mt-1 mr-3 text-sm"></i>
-                        <span>Składanie rozdzielnic</span>
-                    </li>
-                </ul>
+                <div class="p-8 relative">
+                    <div class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-amber-50 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="w-16 h-16 bg-amber-50 text-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors duration-300 relative z-10">
+                        <i class="fas fa-tools text-2xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-900 relative z-10">Instalacje Elektryczne</h3>
+                    <ul class="text-slate-600 space-y-3 font-light relative z-10">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-3 text-sm"></i>
+                            <span>Modernizacja instalacji</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-3 text-sm"></i>
+                            <span>Przenoszenie gniazdek</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-3 text-sm"></i>
+                            <span>Montaż oświetlenia LED</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-3 text-sm"></i>
+                            <span>Składanie rozdzielnic</span>
+                        </li>
+                    </ul>
+                </div>
             </article>
 
             <!-- Service 3 -->
-            <article class="bg-white p-8 rounded-3xl border border-slate-100 shadow-soft hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
-                <div class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-red-50 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
-                <div class="w-16 h-16 bg-red-50 text-accent rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300 relative z-10">
-                    <i class="fas fa-car-on text-2xl" aria-hidden="true"></i>
+            <article class="bg-white rounded-3xl border border-slate-100 shadow-soft hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
+                <div class="overflow-hidden">
+                    <img src="{{ url_for('static', filename='images/pogotowie-elektryczne.jpg') }}"
+                         alt="Pogotowie elektryczne 24/7 Trójmiasto - elektryk podczas awaryjnej interwencji"
+                         width="600" height="400" loading="lazy"
+                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-slate-900 relative z-10">Pogotowie Elektryczne 24/7</h3>
-                <p class="text-slate-600 font-light leading-relaxed relative z-10">
-                    Nasze pogotowie elektryczne oferuje natychmiastową pomoc w awariach elektrycznych, szybkie
-                    usuwanie usterek i fachowe doradztwo. Działamy 24 godziny na dobę na terenie całego Trójmiasta.
-                </p>
-                <div class="mt-6 relative z-10">
-                    <a href="tel:+48664883028" class="text-accent font-semibold flex items-center hover:text-red-700 transition-colors">
-                        Zadzwoń teraz <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                    </a>
+                <div class="p-8 relative">
+                    <div class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-red-50 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="w-16 h-16 bg-red-50 text-accent rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300 relative z-10">
+                        <i class="fas fa-car-on text-2xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-900 relative z-10">Pogotowie Elektryczne 24/7</h3>
+                    <p class="text-slate-600 font-light leading-relaxed relative z-10">
+                        Nasze pogotowie elektryczne oferuje natychmiastową pomoc w awariach elektrycznych, szybkie
+                        usuwanie usterek i fachowe doradztwo. Działamy 24 godziny na dobę na terenie całego Trójmiasta.
+                    </p>
+                    <div class="mt-6 relative z-10">
+                        <a href="tel:+48664883028" class="text-accent font-semibold flex items-center hover:text-red-700 transition-colors">
+                            Zadzwoń teraz <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
                 </div>
             </article>
+        </div>
+
+        <h4 class="text-2xl font-bold text-slate-900 mt-16 mb-8 flex items-center">
+            <span class="w-10 h-10 bg-amber-50 text-secondary rounded-xl flex items-center justify-center mr-4">
+                <i class="fas fa-paint-roller" aria-hidden="true"></i>
+            </span>
+            Usługi budowlano-wykończeniowe
+        </h4>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Finishing Work 1 -->
+            <article class="bg-white rounded-3xl border border-slate-100 shadow-soft hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
+                <div class="overflow-hidden">
+                    <img src="{{ url_for('static', filename='images/malowanie-scian.jpg') }}"
+                         alt="Malowanie wnętrz - usługi wykończeniowe Gdańsk"
+                         width="600" height="400" loading="lazy"
+                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Malowanie wnętrz</h3>
+                    <p class="text-slate-600 font-light leading-relaxed">
+                        Przygotowanie podłoża i malowanie ścian oraz sufitów z dbałością o każdy detal.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Finishing Work 2 -->
+            <article class="bg-white rounded-3xl border border-slate-100 shadow-soft hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
+                <div class="overflow-hidden">
+                    <img src="{{ url_for('static', filename='images/ukladanie-paneli.jpg') }}"
+                         alt="Układanie paneli podłogowych - usługi wykończeniowe Trójmiasto"
+                         width="600" height="400" loading="lazy"
+                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Układanie paneli podłogowych</h3>
+                    <p class="text-slate-600 font-light leading-relaxed">
+                        Montaż paneli i podłóg wraz z przygotowaniem podłoża i wykończeniem listwami.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Finishing Work 3 -->
+            <article class="bg-white rounded-3xl border border-slate-100 shadow-soft hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
+                <div class="overflow-hidden">
+                    <img src="{{ url_for('static', filename='images/zabudowa-gipsowo-kartonowa.jpg') }}"
+                         alt="Zabudowa i szpachlowanie płyt g-k - remonty Gdańsk"
+                         width="600" height="400" loading="lazy"
+                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Zabudowy gipsowo-kartonowe</h3>
+                    <p class="text-slate-600 font-light leading-relaxed">
+                        Montaż ścianek i zabudów z płyt g-k wraz z taśmowaniem i szpachlowaniem.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="mt-12 text-center">
+            <a href="{{ url_for('main.finishing') }}" class="inline-flex items-center justify-center bg-white text-slate-800 border border-slate-200 px-8 py-4 rounded-full text-lg font-semibold hover:bg-slate-50 hover:border-slate-300 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                Zobacz pełną ofertę wykończeniową <i class="fas fa-arrow-right ml-2"></i>
+            </a>
         </div>
     </div>
 </section>
@@ -264,12 +366,13 @@
             <div>
                 <h2 class="text-sm font-bold text-primary uppercase tracking-widest mb-2">O Firmie</h2>
                 <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">
-                    Potrzebujesz fachowca w zakresie prac elektrycznych?
+                    Potrzebujesz fachowca w zakresie prac elektrycznych lub wykończeniowych?
                 </h3>
                 <p class="text-slate-600 mb-8 leading-relaxed font-light text-lg">
                     <strong class="font-medium text-slate-800">Faza Ekspert sp. z o.o.</strong> to dynamicznie rozwijająca się firma, 
                     która składa się z wykwalifikowanych i certyfikowanych specjalistów. 
-                    Specjalizujemy się w kompleksowych usługach elektrycznych na terenie Trójmiasta i okolic. 
+                    Specjalizujemy się w kompleksowych usługach elektrycznych na terenie Trójmiasta i okolic,
+                    a naszą ofertę rozszerzyliśmy o prace budowlano-wykończeniowe. 
                     Dzięki naszemu doświadczeniu zapewniamy najwyższy standard wykonania, dbając przede wszystkim 
                     o bezpieczeństwo i zadowolenie klientów.
                 </p>

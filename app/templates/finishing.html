@@ -1,0 +1,261 @@
+{% extends "base.html" %}
+
+{% block title %}Usługi Budowlano-Wykończeniowe Gdańsk | Remonty Trójmiasto | Faza-Ekspert{% endblock %}
+
+{% block description %}Usługi budowlano-wykończeniowe Gdańsk ⚡ Malowanie, panele podłogowe, zabudowy g-k ⚡ Remonty i wykończenia wnętrz ⚡ Gdańsk, Gdynia, Sopot{% endblock %}
+
+{% block keywords %}usługi budowlano-wykończeniowe Gdańsk, usługi wykończeniowe Trójmiasto, remonty Gdańsk, malowanie wnętrz, układanie paneli podłogowych, zabudowa gipsowo-kartonowa, wykończenia wnętrz Gdynia, remonty Sopot, prace wykończeniowe{% endblock %}
+
+{% block structured_data %}
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Usługi budowlano-wykończeniowe",
+    "provider": {
+        "@type": "LocalBusiness",
+        "name": "Faza-Ekspert sp. z o.o.",
+        "telephone": "+48664883028",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Racławicka 9/5",
+            "addressLocality": "Gdańsk",
+            "postalCode": "80-280",
+            "addressCountry": "PL"
+        }
+    },
+    "areaServed": ["Gdańsk", "Gdynia", "Sopot", "Trójmiasto"],
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Przykładowe prace budowlano-wykończeniowe",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Malowanie wnętrz",
+                    "description": "Profesjonalne malowanie ścian i sufitów z przygotowaniem podłoża"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Układanie paneli podłogowych",
+                    "description": "Montaż paneli i podłóg wraz z przygotowaniem podłoża"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Zabudowy gipsowo-kartonowe",
+                    "description": "Montaż i szpachlowanie zabudów z płyt g-k"
+                }
+            }
+        ]
+    }
+}
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-primary to-blue-600 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">USŁUGI BUDOWLANO-WYKOŃCZENIOWE</h1>
+        <p class="text-xl opacity-90">Kompleksowe wykończenia wnętrz dla Twojego domu i firmy</p>
+    </div>
+</section>
+
+<!-- Introduction Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="relative group hidden lg:block">
+                <div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-20 rounded-[2.5rem] blur-2xl group-hover:opacity-30 transition duration-500"></div>
+                <img src="{{ url_for('static', filename='images/wykonczenia-hero.jpg') }}"
+                     alt="Świeżo wykończone wnętrze mieszkania - usługi budowlano-wykończeniowe Faza-Ekspert Gdańsk"
+                     width="800" height="450" loading="lazy"
+                     class="relative rounded-[2.5rem] shadow-2xl w-full object-cover h-[420px] border-8 border-white">
+            </div>
+            <div>
+                <h2 class="text-sm font-bold text-primary uppercase tracking-widest mb-2">Wykończenia Wnętrz</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">
+                    Od stanu surowego do gotowego wnętrza
+                </h3>
+                <p class="text-slate-600 mb-6 leading-relaxed font-light text-lg">
+                    Obok usług elektrycznych oferujemy również <strong class="font-medium text-slate-800">prace budowlano-wykończeniowe</strong>
+                    na terenie Trójmiasta. Realizujemy zlecenia starannie, terminowo i z dbałością o każdy detal,
+                    tak aby Twoje wnętrze było gotowe do zamieszkania lub pracy.
+                </p>
+                <p class="text-slate-600 mb-8 leading-relaxed font-light text-lg">
+                    Dzięki temu wszystkie prace — od instalacji elektrycznej po finalne wykończenie —
+                    możesz zlecić jednej sprawdzonej firmie.
+                </p>
+                <a href="{{ url_for('main.contact') }}" class="inline-flex items-center justify-center bg-primary text-white px-8 py-3.5 rounded-full font-medium hover:bg-blue-700 hover:shadow-lg transition-all duration-300">
+                    Zapytaj o wycenę <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sample Works Section -->
+<section class="py-24 bg-slate-50 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-sm font-bold text-primary uppercase tracking-widest mb-2">Przykładowe Realizacje</h2>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900">Prace, które wykonujemy</h3>
+            <div class="w-24 h-1 bg-secondary mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Work 1 -->
+            <article class="bg-white rounded-3xl border border-slate-100 shadow-soft hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
+                <div class="overflow-hidden">
+                    <img src="{{ url_for('static', filename='images/malowanie-scian.jpg') }}"
+                         alt="Malowanie wnętrz - usługi wykończeniowe Gdańsk"
+                         width="600" height="400" loading="lazy"
+                         class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-8">
+                    <div class="w-12 h-12 bg-blue-50 text-primary rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-paint-roller text-xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Malowanie wnętrz</h3>
+                    <p class="text-slate-600 font-light leading-relaxed">
+                        Przygotowanie podłoża, gruntowanie i malowanie ścian oraz sufitów.
+                        Czyste, równe powłoki i staranne zabezpieczenie pomieszczeń.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Work 2 -->
+            <article class="bg-white rounded-3xl border border-slate-100 shadow-soft hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
+                <div class="overflow-hidden">
+                    <img src="{{ url_for('static', filename='images/ukladanie-paneli.jpg') }}"
+                         alt="Układanie paneli podłogowych - usługi wykończeniowe Trójmiasto"
+                         width="600" height="400" loading="lazy"
+                         class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-8">
+                    <div class="w-12 h-12 bg-amber-50 text-secondary rounded-2xl flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-layer-group text-xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Układanie paneli podłogowych</h3>
+                    <p class="text-slate-600 font-light leading-relaxed">
+                        Montaż paneli i podłóg wraz z przygotowaniem podłoża, podkładem
+                        oraz estetycznym wykończeniem listwami przypodłogowymi.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Work 3 -->
+            <article class="bg-white rounded-3xl border border-slate-100 shadow-soft hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
+                <div class="overflow-hidden">
+                    <img src="{{ url_for('static', filename='images/zabudowa-gipsowo-kartonowa.jpg') }}"
+                         alt="Zabudowa i szpachlowanie płyt gipsowo-kartonowych - remonty Gdańsk"
+                         width="600" height="400" loading="lazy"
+                         class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-8">
+                    <div class="w-12 h-12 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-trowel-bricks text-xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Zabudowy gipsowo-kartonowe</h3>
+                    <p class="text-slate-600 font-light leading-relaxed">
+                        Montaż ścianek działowych i zabudów z płyt g-k, taśmowanie
+                        oraz szpachlowanie przygotowujące powierzchnię do malowania.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="mt-12 text-center">
+            <p class="text-slate-500 font-light max-w-2xl mx-auto">
+                Powyższe realizacje mają charakter przykładowy — pełny zakres usług budowlano-wykończeniowych
+                jest obecnie przygotowywany. Skontaktuj się z nami, aby omówić swój projekt.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Why Us Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="bg-gray-50 p-8 rounded-3xl border border-slate-100">
+                <div class="w-16 h-16 bg-blue-50 text-primary rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                    <i class="fas fa-bolt text-2xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-slate-900">Elektryka i wykończenie w jednej firmie</h3>
+                <p class="text-slate-600 font-light leading-relaxed">
+                    Instalację elektryczną i prace wykończeniowe koordynujemy razem — bez szukania kilku wykonawców.
+                </p>
+            </div>
+            <div class="bg-gray-50 p-8 rounded-3xl border border-slate-100">
+                <div class="w-16 h-16 bg-amber-50 text-secondary rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                    <i class="fas fa-clock text-2xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-slate-900">Terminowość</h3>
+                <p class="text-slate-600 font-light leading-relaxed">
+                    Ustalamy realistyczny harmonogram prac i dotrzymujemy uzgodnionych terminów.
+                </p>
+            </div>
+            <div class="bg-gray-50 p-8 rounded-3xl border border-slate-100">
+                <div class="w-16 h-16 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                    <i class="fas fa-medal text-2xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-slate-900">Jakość wykonania</h3>
+                <p class="text-slate-600 font-light leading-relaxed">
+                    Dbamy o detale i porządek na miejscu prac — od pierwszej warstwy gładzi po ostatnią listwę.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-primary"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center bg-white/10 backdrop-blur-md rounded-[3rem] p-12 border border-white/20 shadow-2xl">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-white tracking-tight">Planujesz remont lub wykończenie?</h2>
+            <p class="text-xl mb-10 text-blue-100 font-light max-w-2xl mx-auto">
+                Opisz nam swój projekt, a przygotujemy wycenę i zaproponujemy najlepsze rozwiązania. Zadzwoń lub napisz.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="tel:+48664883028" class="bg-accent text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 hover:shadow-[0_0_20px_rgba(220,38,38,0.5)] transition-all duration-300 flex items-center justify-center group">
+                    <i class="fas fa-phone mr-3 group-hover:rotate-12 transition-transform"></i>664 883 028
+                </a>
+                <a href="mailto:elektryk@faza-ekspert.pl" class="bg-white text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-50 transition-all duration-300 flex items-center justify-center">
+                    <i class="fas fa-envelope mr-3"></i>Napisz do nas
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Areas -->
+<section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Obszar działania</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-map-marker-alt text-4xl text-primary mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Gdańsk</h3>
+                <p class="text-gray-600">Centrum i wszystkie dzielnice</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-map-marker-alt text-4xl text-primary mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Gdynia</h3>
+                <p class="text-gray-600">Cała Gdynia i okolice</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-map-marker-alt text-4xl text-primary mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Sopot</h3>
+                <p class="text-gray-600">Sopot i sąsiednie gminy</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
